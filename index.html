@@ -23,17 +23,67 @@
                     <img class="hero-logo" src="assets/svg/logo.svg" alt="Logo">
                 </div>
             </div>
-            <a href="#about" class="scroll-down" aria-label="scroll down"></a>
+            <a href="#about" class="scroll-down" aria-label="scroll down"><img src=".svg"></a>
         </section>
 
 
         <section id="about">
             <div class="container">
-                <h2 class="heading"></h2>
-                <div class="about-me"></div>
+                <h2 class="heading">About me</h2>
+                <div class="about-me">
+                    <div class="about-img"></div>
+                    <div class="about-content">
+                        <h3>hi, i'm</h3>
+                        <h1>SAMUEL JONES</h1>
+                        <p class="about-desc">
+                            I'm a software engineering student at 
+                            Louisiana State University, with educational 
+                            goal being to learn as much as I can about 
+                            a variety of topics involving computer science. 
+                            <a href=""><small>[more about me]</small></a>
+                        </p>
+                        <div class="about-btns">
+                            <button>Say Hi</button>
+                        </div>
+                    </div>
+                </div>
 
-                <h2 class="heading"></h2>
-                <div class="about-skills"></div>
+                <h2 class="heading">What I do</h2>
+                <div class="about-skills">
+                    <div class="skill">
+                        <img src=".svg" alt="">
+                        <h4>Full-Stack Development</h4>
+                        <p>
+                            My primary focus in my personal development 
+                            of programming skills is full-stack, because 
+                            I know being able to implement a website from 
+                            top to  makes me a better developer overall, 
+                            even if I am not doing full-stack at the time. 
+                        </p>
+                    </div>
+                    <div class="skill">
+                        <img src=".svg" alt="">
+                        <h4>Design</h4>
+                        <p>
+                            Although the pure thrill of problem solving is 
+                            what first attracted me to programming, I have 
+                            recently acquired a love for visual design, which 
+                            I prefer to show through my work than tell.
+                        </p>
+                    </div>
+                    <div class="skill">
+                        <img src=".svg" alt="">
+                        <h4>Software Engineering</h4>
+                        <p>
+                            Through my degree program I am able to develop 
+                            some of the skills that are more difficult to 
+                            acquire on your own. I have developed and am 
+                            continuing to develop my systems design, 
+                            communication, team work, problem-solving, and 
+                            learning skills.
+                        </p>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -41,7 +91,53 @@
         <section id="work">
             <div class="container">
                 <h2 class="heading"></h2>
-                <div class="work-projects"></div>
+                <div class="work-projects">
+                    <div class="project">
+                        <div class="project-img"></div>
+                        <div class="project-details">
+                            <h3>GitBan</h3>
+                            <p class="project-desc">
+                                A GitHub integrated Kanban board
+                                tailored towards remote collaboration
+                                between developers
+                            </p>
+                            <p class="project-stack">
+                                <b>Tech Stack: </b>
+                                Node.js, Express, Passport, MongoDB, 
+                                Mongoose, EJS, Azure 
+                            </p>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <div class="project-img"></div>
+                        <div class="project-details">
+                            <h3>Algorithm Visualizer</h3>
+                            <p class="project-desc">
+                                A lightweight, single-page pathfinding 
+                                and sorting algorithm visualizer
+                            </p>
+                            <p class="project-stack">
+                                <b>Tech Stack: </b>
+                                HTML, CSS, Javascript, Single page app
+                            </p>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <div class="project-img"></div>
+                        <div class="project-details">
+                            <h3>Bopify</h3>
+                            <p class="project-desc">
+                                A playlist generator for spotify 
+                                to give you music for any occasion
+                            </p>
+                            <p class="project-stack">
+                                React.js, Node.js, Express, Passport, 
+                                Spotify API
+                            </p>
+                        </div>
+                    </div>
+                    <div class="view-more"></div>
+                </div>
             </div>
         </section>
 
@@ -51,12 +147,15 @@
                 <h3 class="heading"></h3>
                 <div class="contact-content">
                     <div class="contact-info">
-                        <img src="" alt="" class="contact-img">
+                        <img src=".svg" alt="" class="contact-img">
                         <div class="contact-info-content">
-                            <p></p>
-                            <h4></h4>
-                            <h3></h3>
-                            <h3></h3>
+                            <p>Have something to say? Feel free to contact me.
+                                I'm open to job opportunities, commissions, or
+                                any other questions.
+                            </p>
+                            <h4>Where to contact me</h4>
+                            <h3>spjones329@gmail.com</h3>
+                            <h3>(985) 869-4135</h3>
                         </div>
                     </div>
                     <form action="" class="contact-form">
@@ -69,14 +168,14 @@
                         <div class="form-input">
                             <input type="email" name="email" class="input">
                             <label for="email">Your Email</label>
-                            <p class="err-msg"></p>
+                            <p class="err-msg">Email field must be filled</p>
                         </div>
                         <div class="form-input">
                             <textarea name="msg" id="msg" cols="30" rows="10" class="input"></textarea>
                             <label for="msg">Message</label>
-                            <p class="err-msg">Message input must be filled out</p>
+                            <p class="err-msg">Must send a non-empty message</p>
                         </div>
-                        <button type="submit" class="btn btn-primary" id="form-submit"></button>
+                        <button type="submit" class="btn btn-primary" id="form-submit">Send</button>
                     </form>
                 </div>
             </div>
@@ -88,10 +187,17 @@
             <a href="#top" aria-label="Scroll to top" class="scroll-up"></a>
             <div class="footer-content">
                 <div class="footer-info">
-
+                    <img src="assets/svg/logo.svg" alt="" class="Logo">
+                    <span>
+                        <h2>SAMUEL JONES</h2>
+                        <p>Software Engineering Student</p>
+                    </span>
                 </div>
                 <span class="footer-links">
-                    
+                    <a href="http://github.com/SamJones329" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GH</a>
+                    <a href="http://dribble.com/SamJones329" target="_blank" rel="noopener noreferrer" aria-label="Dribble">DB</a>
+                    <a href="http://linkedin.com/SamJones329" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LI</a>
+                    <a href="mailto:spjones329@gmail.com" aria-label="Mail to Samuel Jones' email">EM</a>
                 </span>
             </div>
         </div>
