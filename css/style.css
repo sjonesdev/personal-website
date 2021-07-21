@@ -85,6 +85,7 @@ body {
     background: var(--blue-fluorescent-dark);
     color: var(--shades-450);
     font-family: 'Source Sans Pro', sans-serif;
+    line-height: 1.7;
 }
 
 section {
@@ -153,4 +154,27 @@ button {
 
     height: 200px;
     background: black;
+}
+
+.about-skills {
+    display: flex;
+}
+
+.skill {
+    --border-color: var(--orange-fluorescent-dark);
+    flex-basis: 100%;
+    border: 2px solid var(--border-color);/*var(--border-color);*/
+    border-radius: 10px;
+    margin: 10px;
+    padding: 0 2rem;
+}
+
+.skill h4 {
+    color: var(--blue-fluorescent-dark);
+}
+
+.skill--alt {
+    --border-color: var(--blue-fluorescent-dark);
+    background: var(--orange-fluorescent-dark);
+    color: var(--blue-fluorescent-dark);
 }
