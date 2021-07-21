@@ -223,7 +223,7 @@ nav {
 
 .skill {
     --border-color: var(--orange-fluorescent-dark);
-    flex-basis: 100%;
+    width: 100%;
     border: 2px solid var(--border-color);/*var(--border-color);*/
     border-radius: 10px;
     margin: 5px;
@@ -238,4 +238,15 @@ nav {
     --border-color: var(--blue-fluorescent-dark);
     background: var(--orange-fluorescent-dark);
     color: var(--blue-fluorescent-dark);
+}
+
+/*--------------------
+    About Section
+--------------------*/
+.contact-content {
+    display: flex;
+}
+
+.contact-content > * {
+    width: 100%;
 }
