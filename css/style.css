@@ -80,6 +80,10 @@
 
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     background: var(--blue-fluorescent-dark);
@@ -98,10 +102,25 @@ button {
     background: var(--orange-fluorescent-dark);
     color: var(--blue-fluorescent-dark);
     padding: .65em 1.5em;
-    margin: 1em;
     border-radius: 10px;
     border-radius: 10px;
     border: none;
+}
+
+h1 {
+    margin: 0;
+    width: max-content;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 #about {
@@ -138,22 +157,64 @@ button {
     font-size: 1.2rem;
 }
 
+/*--------------------
+    Header Styles
+    --------------------*/
+.header-content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-logo {
+    padding-top: 50px;
+}
+
+nav {
+    /* display: flex;
+    justify-content: center;
+    width: max-content; */
+    position: sticky;
+    top: 0;
+    background: var(--blue-fluorescent-dark);
+}
+
+.navbar {
+    width: max-content;
+    margin: auto;
+}
+
+.navbar li {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    font-size: 1.3rem;
+}
+
+.scroll-down {
+    display: block;
+    width: max-content;
+    margin: auto;
+}
+
 
 /*--------------------
     About Section
 --------------------*/
 .about-me {
-    width: 80%;
+    width: 100%;
     margin: auto;
     display: flex;
+    align-items: center;
 }
 
 .about-img {
     width: 35%;
     max-width: 300px;
-
+    flex-shrink: 0;
     height: 200px;
     background: black;
+    margin: 15px;
 }
 
 .about-skills {
@@ -165,7 +226,7 @@ button {
     flex-basis: 100%;
     border: 2px solid var(--border-color);/*var(--border-color);*/
     border-radius: 10px;
-    margin: 10px;
+    margin: 5px;
     padding: 0 2rem;
 }
 
