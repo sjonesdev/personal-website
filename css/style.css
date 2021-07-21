@@ -1,0 +1,156 @@
+:root {
+
+    /*---------------
+        Oranges
+    ---------------*/
+    --orange-earth: #735B2E;
+    --orange-fluorescent-dark: #FF7D15;
+    --orange-fluorescent: #FFA902;
+    --orange-pastel-earth: #FFDC99;
+    --orange-pastel: #FFEECC;
+    
+    /*---------------
+        Blues
+    ---------------*/
+    --blue-earth: #3D4466;
+    /* --blue-fluorescent-dark: #1E2B58; */
+    --blue-fluorescent-dark: #092F5C;
+    --blue-fluorescent: #0023D1;
+    --blue-pastel-earth: #99AAFF;
+    --blue-pastel: #CCD5FF;
+
+
+    /*---------------
+        Greens
+    ---------------*/
+    --green-earth: #4B663D;
+    --green-fluorescent-dark: #44CC00;
+    --green-fluorescent: #56FF02;
+    --green-pastel-earth: #BBFF99;
+    --green-pastel: #DDFFCC;
+
+    /*---------------
+        Light-Blues
+    ---------------*/
+    --light-blue-earth: #457373;
+    --light-blue-fluorescent-dark: #00CCCC;
+    --light-blue-fluorescent: #02FFFF;
+    --light-blue-pastel: #CCFFFF;
+
+    /*---------------
+        Magentas
+    ---------------*/
+    --magenta-earth: #733973;
+    --magenta-fluorescent: #FF02FF;
+    --magenta-pastel-earth: #FF66FF;
+    --magenta-pastel: #FFCCFF;
+
+    /*---------------
+        Purples
+    ---------------*/
+    --purple-earth: #563973;
+    --purple-fluorescent-dark: #8000FF;
+    --purple-fluorescent: #B366FF;
+    --purple-pastel: #E6CCFF;
+
+    /*---------------
+        Pinks
+    ---------------*/
+    --pink-earth: #803359;
+    --pink-fluorescent: #FF0281;
+    --pink-pastel-earth: #FF99CC;
+    --pink-pastel: #FFCCE6;
+
+    /*---------------
+        Yellows
+    ---------------*/
+    --yellow-fluorescent: #FFD702;
+    --yellow-pastel-earth: #FFEF99;
+    --yellow-pastel: #FFF7CC;
+
+    /*---------------
+        Shades
+    ---------------*/
+    --shades-100: #000000;
+    --shades-200: #4D4D4D;
+    --shades-300: #999999;
+    --shades-400: #CCCCCC;
+    --shades-450: #F7F7F7;
+    --shades-500: #FFFFFF;
+
+}
+
+body {
+    margin: 0;
+    background: var(--blue-fluorescent-dark);
+    color: var(--shades-450);
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+section {
+    margin: auto;
+    padding: 0 10%;
+    width: 80%;
+}
+
+button {
+    background: var(--orange-fluorescent-dark);
+    color: var(--blue-fluorescent-dark);
+    padding: .65em 1.5em;
+    margin: 1em;
+    border-radius: 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+#about {
+    background: var(--shades-450);
+    color: var(--shades-200);
+}
+
+#contact {
+    background: var(--shades-450);
+    color: var(--shades-200);
+}
+
+.hero-title {
+    /* color: var(--shade-450); */
+    color: var(--shades-450);
+    font-size: 5rem;
+    font-family: 'Source Serif Pro', serif;
+    font-weight: 900;
+}
+
+.heading {
+    --heading-color: var(--blue-earth);
+    color: var(--heading-color);
+    font-size: 3rem;
+    font-family: 'Source Serif Pro', serif;
+    font-weight: 600 semi-bold;
+}
+
+.heading--alt {
+    --heading-color: var(--shades-450);
+}
+
+.about-btns * {
+    font-size: 1.2rem;
+}
+
+
+/*--------------------
+    About Section
+--------------------*/
+.about-me {
+    width: 80%;
+    margin: auto;
+    display: flex;
+}
+
+.about-img {
+    width: 35%;
+    max-width: 300px;
+
+    height: 200px;
+    background: black;
+}
