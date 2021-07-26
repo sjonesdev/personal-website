@@ -532,4 +532,7 @@ nav {
     /*--------------------
         Contact Styles
     --------------------*/
+    .contact-content {
+        flex-direction: column;
+    }
 }
