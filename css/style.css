@@ -94,28 +94,49 @@ body {
 
 section {
     margin: auto;
-    padding: 0 10%;
+    padding: 1.5rem 10%;
     width: 80%;
+    scroll-margin-top: 5rem;
 }
 
 button {
     background: var(--orange-fluorescent-dark);
     color: var(--blue-fluorescent-dark);
     padding: .65em 1.5em;
-    border-radius: 10px;
-    border-radius: 10px;
+    border-radius: 1.1rem;
     border: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+h1, h2, h3, h4 {
+    margin: 0;
+    line-height: 1.1;
 }
 
 h1 {
-    margin: 0;
     width: max-content;
+}
+
+h3 {
+    font-size: 2rem;
+    color: var(--orange-fluorescent-dark);
+}
+
+h4 {
+    font-size: 1.7rem;
+    color: var(--shades-200);
+    font-weight: 400;
 }
 
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+}
+
+p {
+    font-size: 1.3rem;
 }
 
 a {
@@ -147,6 +168,7 @@ a {
     font-size: 3rem;
     font-family: 'Source Serif Pro', serif;
     font-weight: 600 semi-bold;
+    margin: 3rem 0;
 }
 
 .heading--alt {
@@ -154,7 +176,7 @@ a {
 }
 
 .about-btns * {
-    font-size: 1.2rem;
+    
 }
 
 /*--------------------
@@ -210,11 +232,28 @@ nav {
 
 .about-img {
     width: 35%;
+    height: max-content;
+    max-height: 300px;
     max-width: 300px;
     flex-shrink: 0;
-    height: 200px;
-    background: black;
     margin: 15px;
+}
+
+.about-img img {
+    width: 100%;
+    border-radius: 50%;
+    background: var(--orange-pastel-earth);
+}
+
+.about-me h3 {
+    font-size: 2rem;
+    color: var(--blue-fluorescent-dark)
+}
+
+.about-me h1 {
+    font-size: 3rem;
+    color: var(--orange-fluorescent-dark);
+    font-weight: 900;
 }
 
 .about-skills {
@@ -224,24 +263,24 @@ nav {
 .skill {
     --border-color: var(--orange-fluorescent-dark);
     width: 100%;
-    border: 2px solid var(--border-color);/*var(--border-color);*/
+    border: 2px solid var(--border-color);
     border-radius: 10px;
     margin: 5px;
     padding: 0 2rem;
 }
 
-.skill h4 {
+.skill h3 {
     color: var(--blue-fluorescent-dark);
 }
 
 .skill--alt {
     --border-color: var(--blue-fluorescent-dark);
-    background: var(--orange-fluorescent-dark);
+    background: var(--orange-fluorescent);
     color: var(--blue-fluorescent-dark);
 }
 
 /*--------------------
-    About Section
+    Contact Section
 --------------------*/
 .contact-content {
     display: flex;
@@ -249,4 +288,90 @@ nav {
 
 .contact-content > * {
     width: 100%;
+}
+
+.contact-form > h4 {
+    margin: 1rem;
+}
+
+.contact-form p {
+    margin: 0;
+}
+
+.contact-info {
+    padding: 1rem;
+    margin: 1rem;
+    background: var(--blue-pastel);
+    color: var(--shades-200);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.contact-content h4 {
+    color: var(--orange-fluorescent-dark);
+}
+
+.contact-info h3 {
+    color: var(--blue-earth);
+}
+
+.contact-img {
+    width: 100%;
+}
+
+.err-msg {
+    color: var(--pink-earth);
+    font-size: 1.1rem;
+}
+
+.form-input {
+    position: relative;
+    border: none;
+    padding: 1rem;
+    color: var(--blue-fluorescent-dark);
+}
+
+.form-input input, .form-input label {
+    font-size: 1.3rem;
+    transition: all 200ms;
+}
+
+.form-input label {
+    padding: 0 0.5rem;
+    position: absolute;
+    top: 1.6rem;
+    left: 1.5rem;
+    color: var(--shades-300);
+    cursor: text;
+}
+
+.input {
+    width: 100%;
+    border-radius: 0.5rem;
+    border: none;
+    padding: 1rem 0.9rem;
+    resize: none;
+    background: var(--shades-500);
+    --bs-input-clr: var(--blue-pastel-earth);
+    box-shadow: 0 0 0 1.5px var(--bs-input-clr);
+}
+
+.input:focus {
+    outline: none;
+    --bs-input-clr: var(--blue-fluorescent);
+}
+
+.input--active {
+    background: var(--shades-450);
+}
+
+.input--active+label {
+    background: var(--shades-450);
+    color: var(--blue-fluorescent);
+    font-size: 1.1rem;
+    top: 0;
+    left: 2rem;
+}
+
+.contact-btn {
+    margin: 1rem;
 }

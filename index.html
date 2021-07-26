@@ -60,7 +60,7 @@
             <div class="container">
                 <h2 class="heading">About me</h2>
                 <div class="about-me">
-                    <div class="about-img"></div>
+                    <div class="about-img"><img src="assets/img/portfolio-portrait.png" alt="A picture of Samuel Jones"></div>
                     <div class="about-content">
                         <h3>hi, i'm</h3>
                         <h1>SAMUEL JONES</h1>
@@ -80,8 +80,8 @@
                 <h2 class="heading">What I do</h2>
                 <div class="about-skills">
                     <div class="skill">
-                        <img src=".svg" alt="">
-                        <h4>Full-Stack Development</h4>
+                        <img src="assets/img/logo.svg" alt="">
+                        <h3>Back-End</h3>
                         <p>
                             My primary focus in my personal development 
                             of programming skills is full-stack, because 
@@ -91,8 +91,8 @@
                         </p>
                     </div>
                     <div class="skill skill--alt">
-                        <img src=".svg" alt="">
-                        <h4>Design</h4>
+                        <img src="assets/img/logo.svg" alt="">
+                        <h3>Front-End</h3>
                         <p>
                             Although the pure thrill of problem solving is 
                             what first attracted me to programming, I have 
@@ -101,8 +101,8 @@
                         </p>
                     </div>
                     <div class="skill">
-                        <img src=".svg" alt="">
-                        <h4>Software Engineering</h4>
+                        <img src="assets/img/logo.svg" alt="">
+                        <h3>Studies</h3>
                         <p>
                             Through my degree program I am able to develop 
                             some of the skills that are more difficult to 
@@ -122,7 +122,9 @@
                 <h2 class="heading heading--alt">My Work</h2>
                 <div class="work-projects">
                     <div class="project">
-                        <div class="project-img"></div>
+                        <div class="project-img">
+                            <img src="assets/img/logo.svg" alt="">
+                        </div>
                         <div class="project-details">
                             <h3>GitBan</h3>
                             <p class="project-desc">
@@ -138,7 +140,9 @@
                         </div>
                     </div>
                     <div class="project">
-                        <div class="project-img"></div>
+                        <div class="project-img">
+                            <img src="assets/img/logo.svg" alt="">
+                        </div>
                         <div class="project-details">
                             <h3>Algorithm Visualizer</h3>
                             <p class="project-desc">
@@ -152,7 +156,9 @@
                         </div>
                     </div>
                     <div class="project">
-                        <div class="project-img"></div>
+                        <div class="project-img">
+                            <img src="assets/img/logo.svg" alt="">
+                        </div>
                         <div class="project-details">
                             <h3>Bopify</h3>
                             <p class="project-desc">
@@ -176,7 +182,7 @@
                 <h3 class="heading"></h3>
                 <div class="contact-content">
                     <div class="contact-info">
-                        <img src=".svg" alt="" class="contact-img">
+                        <img src="assets/img/logo.svg" alt="Logo" class="contact-img">
                         <div class="contact-info-content">
                             <p>Have something to say? Feel free to contact me.
                                 I'm open to job opportunities, commissions, or
@@ -187,15 +193,15 @@
                             <h3>(985) 869-4135</h3>
                         </div>
                     </div>
-                    <form action="" class="contact-form">
+                    <form action="" class="contact-form" id="contact-form">
                         <h4>Contact me here</h4>
                         <div class="form-input">
-                            <input type="text" name="name" class="input">
+                            <input type="text" name="name" id="name" class="input">
                             <label for="name">Name</label>
                             <p class="err-msg">Name field must be filled</p>
                         </div>
                         <div class="form-input">
-                            <input type="email" name="email" class="input">
+                            <input type="email" name="email" id="email" class="input">
                             <label for="email">Your Email</label>
                             <p class="err-msg">Email field must be filled</p>
                         </div>
@@ -204,7 +210,7 @@
                             <label for="msg">Message</label>
                             <p class="err-msg">Must send a non-empty message</p>
                         </div>
-                        <button type="submit" class="btn btn-primary" id="form-submit">Send</button>
+                        <button type="submit" class="btn contact-btn" id="form-submit">Send</button>
                     </form>
                 </div>
             </div>
@@ -240,5 +246,6 @@
         </div>
     </footer>
 
+    <script src="js/index.js"></script>
 </body>
 </html>
