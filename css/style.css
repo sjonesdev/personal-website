@@ -330,7 +330,7 @@ nav {
     color: var(--blue-fluorescent-dark);
 }
 
-.form-input input, .form-input label {
+.form-input input, .form-input textarea, .form-input label {
     font-size: 1.3rem;
     transition: all 200ms;
 }
