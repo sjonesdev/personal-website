@@ -297,19 +297,12 @@ nav {
     margin-bottom: 2rem;
 }
 
-.project-img {
-    width: 50%;
+.project--alt {
+    flex-direction: row-reverse;
 }
 
-@media only screen and (max-width: 600px) {
-    .project {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .project-img {
-        width: 100%;
-    }
+.project-img {
+    width: 50%;
 }
 
 .project-img > img {
@@ -486,4 +479,57 @@ nav {
 
 .footer-links > span {
     font-size: 1.1rem;
+}
+
+
+/*--------------------
+    Mobile Styles
+--------------------*/
+
+@media only screen and (max-width: 600px) {
+
+    /*--------------------
+        General Styles
+    --------------------*/
+
+    section {
+        width: 95%;
+        padding: 1.5rem 2.5%;
+    }
+
+
+    /*--------------------
+        About Styles
+    --------------------*/
+
+    .about-me {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .about-img {
+        width: 100%;
+    }
+
+
+    /*--------------------
+        My Work Styles
+    --------------------*/
+
+    .project {
+        flex-direction: column;
+    }
+
+    .project-img {
+        width: 100%;
+    }
+
+    .project-details {
+        width: 100%;
+    }
+
+
+    /*--------------------
+        Contact Styles
+    --------------------*/
 }
