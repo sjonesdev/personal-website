@@ -96,7 +96,7 @@ section {
     margin: auto;
     padding: 1.5rem 10%;
     width: 80%;
-    scroll-margin-top: 5rem;
+    scroll-margin-top: 4rem;
 }
 
 button {
@@ -107,6 +107,7 @@ button {
     border: none;
     font-size: 1.2rem;
     font-weight: 600;
+    cursor: pointer;
 }
 
 h1, h2, h3, h4 {
@@ -175,13 +176,10 @@ a {
     --heading-color: var(--shades-450);
 }
 
-.about-btns * {
-    
-}
 
 /*--------------------
     Header Styles
-    --------------------*/
+--------------------*/
 .header-content-container {
     display: flex;
     flex-direction: column;
@@ -198,6 +196,7 @@ nav {
     width: max-content; */
     position: sticky;
     top: 0;
+    z-index: 9999;
     background: var(--blue-fluorescent-dark);
 }
 
@@ -217,6 +216,7 @@ nav {
     display: block;
     width: max-content;
     margin: auto;
+    margin-bottom: 1rem;
 }
 
 
@@ -258,11 +258,14 @@ nav {
 
 .about-skills {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .skill {
     --border-color: var(--orange-fluorescent-dark);
     width: 100%;
+    max-width: 15rem;
     border: 2px solid var(--border-color);
     border-radius: 10px;
     margin: 5px;
@@ -278,6 +281,62 @@ nav {
     background: var(--orange-fluorescent);
     color: var(--blue-fluorescent-dark);
 }
+
+.about-btns button {
+    margin-right: 1rem;
+    width: 8rem;
+} 
+
+
+/*--------------------
+    My Work Styles
+--------------------*/
+.project {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.project-img {
+    width: 50%;
+}
+
+.project-img > img {
+    width: 100%;
+}
+
+.project-details {
+    width: 65%;
+}
+
+.project-details-bottom {
+    display: flex;
+    align-items: center;
+}
+
+.project-details-bottom > a {
+    min-width: 30%;
+}
+
+.project-stack {
+    background: var(--shades-450);
+    color: var(--shades-200);
+    border-radius: 1rem;
+    padding: 0.25rem 0.5rem;
+    margin: 1rem 0;
+}
+
+.project-links {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.project-code-link {
+    font-size: 1.3rem;
+    color: inherit;
+}
+
 
 /*--------------------
     Contact Section
@@ -374,4 +433,46 @@ nav {
 
 .contact-btn {
     margin: 1rem;
+}
+
+
+/*--------------------
+    Footer Styles
+--------------------*/
+
+.footer-content {
+    width: 80%;
+    padding: 0 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3rem 1rem;
+}
+
+.footer-info {
+    display: flex;
+}
+
+.footer-info span {
+    margin: auto;
+}
+
+.footer-info p {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.footer-links > h4 {
+    font-size: 1.5rem;
+    color: var(--shades-450);
+}
+
+.footer-links > span {
+    font-size: 1.1rem;
 }
