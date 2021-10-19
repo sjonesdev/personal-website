@@ -132,13 +132,16 @@ h4 {
 }
 
 ul {
-    list-style-type: none;
     margin: 0;
-    padding: 0;
 }
 
 p {
     font-size: 1.3rem;
+    margin: 0;
+}
+
+li {
+    font-size: 1.15rem;
 }
 
 a {
@@ -148,6 +151,11 @@ a {
 
 .hidden {
     opacity: 0;
+}
+
+.section--alt {
+    background: var(--shades-450);
+    color: var(--shades-200);
 }
 
 #about {
@@ -211,6 +219,8 @@ nav {
     align-items: center;
     width: max-content;
     margin: auto;
+    list-style-type: none;
+    padding: 0;
 }
 
 .navbar li {
@@ -370,10 +380,6 @@ nav {
     margin: 1rem;
 }
 
-.contact-form p {
-    margin: 0;
-}
-
 .contact-info {
     padding: 1rem;
     margin: 1rem;
@@ -481,7 +487,6 @@ div.form-input {
 }
 
 .footer-info p {
-    margin: 0;
     font-size: 1.1rem;
 }
 
