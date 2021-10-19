@@ -307,6 +307,7 @@ nav {
 
 .project-img {
     width: 50%;
+    padding: 5px;
 }
 
 .project-img > img {
