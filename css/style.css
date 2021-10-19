@@ -447,6 +447,7 @@ div.form-input {
     border: none;
     padding: 1rem 0.9rem;
     resize: none;
+    font-family: 'Source Sans Pro', sans-serif;
     background: var(--shades-500);
     --bs-input-clr: var(--blue-pastel-earth);
     box-shadow: 0 0 0 1.5px var(--bs-input-clr);
