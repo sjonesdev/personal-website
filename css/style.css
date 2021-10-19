@@ -1,3 +1,8 @@
+/* Temporary removal until about page made */
+.about-desc > a {
+    display: none;
+}
+
 :root {
 
     /*---------------
@@ -292,6 +297,10 @@ nav {
 
 .skill h3 {
     color: var(--blue-fluorescent-dark);
+}
+
+.skill p {
+    margin: 1em 0;
 }
 
 .skill--alt {
