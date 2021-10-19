@@ -146,6 +146,10 @@ a {
     color: inherit;
 }
 
+.hidden {
+    opacity: 0;
+}
+
 #about {
     background: var(--shades-450);
     color: var(--shades-200);
@@ -389,6 +393,7 @@ nav {
 .err-msg {
     color: var(--pink-earth);
     font-size: 1.1rem;
+    transition: opacity linear 0.25s;
 }
 
 .form-input {
