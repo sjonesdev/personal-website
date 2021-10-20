@@ -105,6 +105,7 @@ body {
     font-family: 'Source Sans Pro', sans-serif;
     line-height: 1.7;
     width: 100%;
+    overflow-x: hidden;
 }
 
 section {
@@ -557,6 +558,10 @@ div.form-input {
     margin-right: 2rem;
 }
 
+#links button {
+    margin-bottom: 0.5rem;
+}
+
 
 /*--------------------
     Mobile Styles
@@ -603,8 +608,8 @@ div.form-input {
     .project-details {
         width: 100%;
     }
-
-
+    
+    
     /*--------------------
         Contact Styles
     --------------------*/
