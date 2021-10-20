@@ -172,6 +172,18 @@ a {
     color: var(--shades-200);
 }
 
+.flex-wrap-center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.flex-wrap-left {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+}
+
 #about {
     background: var(--shades-450);
     color: var(--shades-200);
@@ -304,12 +316,6 @@ nav {
     font-size: 3rem;
     color: var(--orange-fluorescent-dark);
     font-weight: 900;
-}
-
-.about-skills {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
 }
 
 .skill {
@@ -540,6 +546,15 @@ div.form-input {
 
 .footer-links > span {
     font-size: 1.1rem;
+}
+
+
+/*--------------------
+    Resume Styles
+--------------------*/
+.resume-item {
+    max-width: 40rem;
+    margin-right: 2rem;
 }
 
 
