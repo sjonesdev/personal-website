@@ -2,6 +2,24 @@ window.onload = () => {
     const fadeTarget = document.querySelector('.loader-wrapper');
     fadeTarget.classList.add('fade-out');
     setTimeout(() => {fadeTarget.classList.add('none')}, 500);
+
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        // generate a five digit number for the contact_number variable
+        this.contact_number.value = Math.random() * 100000 | 0;
+        // these IDs from the previous steps
+        const sendBtn = document.querySelector('.contact-btn');
+        const sendCheck = document.getElementById('contact-success-check');
+        emailjs.sendForm('service_tg8r0pp', 'template_fdvp26o', this)
+            .then(function() {
+                console.log('Message sent successfully');
+                sendBtn.classList.add('contact-success');
+                sendCheck.classList.remove('hidden');
+            }, function(error) {
+                console.log('Message failed to send', error);
+                alert('There was a problem sending your message.')
+            });
+    });
 };
 
 const contactForm = document.getElementById('contact-form');

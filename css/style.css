@@ -115,7 +115,7 @@ section {
 }
 
 button {
-    background: var(--orange-fluorescent-dark);
+    background-color: var(--orange-fluorescent-dark);
     color: var(--blue-fluorescent-dark);
     padding: .65em 1.5em;
     border-radius: 1.1rem;
@@ -123,6 +123,12 @@ button {
     font-size: 1.2rem;
     font-weight: 600;
     cursor: pointer;
+    transition: background-color 100ms linear;
+}
+
+button:hover {
+    background-color: var(--orange-fluorescent);
+    color: var(--blue-fluorescent);
 }
 
 h1, h2, h3, h4 {
@@ -547,9 +553,31 @@ div.form-input {
     left: 2rem;
 }
 
+.contact-form-bottom {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
 .contact-btn {
-    margin: 1rem;
-    margin-top: 0;
+    margin: 0 1rem;
+    transition-property: transform, color;
+    transition-duration: 100ms;
+    transition-timing-function: linear;
+}
+
+.contact-btn:active {
+    transform: scale(0.95);
+}
+
+.contact-success {
+    color: var(--green-fluorescent-dark);
+}
+
+#contact-success-check {
+    color: var(--green-fluorescent-dark);
+    font-size: 2rem;
+    transition: opacity 100ms linear;
 }
 
 

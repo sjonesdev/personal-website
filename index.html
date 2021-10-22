@@ -22,20 +22,23 @@
         })();
     </script>
     <script type="text/javascript">
-        window.onload = function() {
-            document.getElementById('contact-form').addEventListener('submit', function(event) {
-                event.preventDefault();
-                // generate a five digit number for the contact_number variable
-                this.contact_number.value = Math.random() * 100000 | 0;
-                // these IDs from the previous steps
-                emailjs.sendForm('service_tg8r0pp', 'template_fdvp26o', this)
-                    .then(function() {
-                        console.log('SUCCESS!');
-                    }, function(error) {
-                        console.log('FAILED...', error);
-                    });
-            });
-        }
+        // window.onload = function() {
+        //     document.getElementById('contact-form').addEventListener('submit', function(event) {
+        //         event.preventDefault();
+        //         // generate a five digit number for the contact_number variable
+        //         this.contact_number.value = Math.random() * 100000 | 0;
+        //         // these IDs from the previous steps
+        //         const sendBtn = document.querySelector('contact-btn');
+        //         emailjs.sendForm('service_tg8r0pp', 'template_fdvp26o', this)
+        //             .then(function() {
+        //                 console.log('Message sent successfully');
+        //                 sendBtn.classList.add('contact-success');
+        //             }, function(error) {
+        //                 console.log('Message failed to send', error);
+        //                 alert('There was a problem sending your message.')
+        //             });
+        //     });
+        // }
     </script>
 
     <title>Samuel Jones</title>
@@ -316,7 +319,10 @@
                             <label for="message">Message</label>
                             <p class="err-msg msg-err hidden">Invalid message</p>
                         </div>
-                        <button type="submit" class="btn contact-btn" id="form-submit">Send</button>
+                        <div class="contact-form-bottom">
+                            <button type="submit" class="btn contact-btn" id="form-submit">Send</button>
+                            <i class="fas fa-check hidden" id="contact-success-check"></i>
+                        </div>
                     </form>
                 </div>
             </div>
