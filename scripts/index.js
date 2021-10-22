@@ -1,3 +1,9 @@
+window.onload = () => {
+    const fadeTarget = document.querySelector('.loader-wrapper');
+    fadeTarget.classList.add('fade-out');
+    setTimeout(() => {fadeTarget.classList.add('none')}, 500);
+};
+
 const contactForm = document.getElementById('contact-form');
 const nameInput = contactForm.querySelector('input[type="text"]');
 const emailInput = contactForm.querySelector('input[type="email"]');
