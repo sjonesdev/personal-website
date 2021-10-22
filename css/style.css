@@ -248,10 +248,6 @@ a {
     align-items: center;
 }
 
-.header-logo {
-    padding-top: 50px;
-}
-
 nav {
     position: sticky;
     top: 0;
