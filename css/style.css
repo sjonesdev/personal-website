@@ -167,6 +167,11 @@ li {
 a {
     text-decoration: none;
     color: inherit;
+    transition: color 100ms linear;
+}
+
+a:hover {
+    color: var(--shades-300);
 }
 
 .hidden {

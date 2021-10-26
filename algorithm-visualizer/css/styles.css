@@ -1,0 +1,339 @@
+:root {
+    
+}
+
+html {
+    font-family: Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    background: lightgrey;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    background-color: darkslategray;
+    color: whitesmoke
+}
+
+h1 {
+    margin: 0;
+}
+
+h3 {
+    width: max-content;
+    margin-bottom: 0;
+}
+
+select {
+    font-size: x-large;
+    width: 12em;
+}
+
+p {
+    font-size: x-large;
+}
+
+
+/* Loader styles */
+.loader-wrapper {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--blue-fluorescent-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+    opacity: 1;
+    transition: opacity 500ms ease-in-out;
+}
+
+.loader {
+    border: 1em solid var(--shades-450);
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    -webkit-animation: 2s loader linear infinite;
+            animation: 2s loader linear infinite;
+    position: relative;
+    display: inline-block;
+	width: 5em;
+	height: 5em;
+	color: inherit;
+	vertical-align: middle;
+	pointer-events: none;
+    z-index: 999;
+}
+
+@-webkit-keyframes loader {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes loader {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* Navbar styles */
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 100ms linear;
+}
+
+a:hover {
+    color: #999999;
+}
+
+nav {
+    color: #F7F7F7;
+    font-family: 'Source Sans Pro', sans-serif;
+    background: #092F5C;
+    position: sticky;
+    top: 0;
+    z-index: 9;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    margin: auto;
+    list-style-type: none;
+    padding: 0;
+}
+
+.navbar li {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    font-size: 1.3rem;
+}
+
+.hero-title {
+    /* color: var(--shade-450); */
+    color: var(--shades-450);
+    font-size: 5rem;
+    font-family: 'Source Serif Pro', serif;
+    font-weight: 900;
+}
+
+.hero-title--small {
+    font-size: 2rem;
+}
+
+
+
+#algo-type {
+    width: 7em;
+}
+
+.title {
+    width: 12rem;
+    height: 6rem;
+    align-items: center;
+    text-align: center;
+    padding: 0.5rem 2rem;
+}
+
+.title h1 {
+    font-size: xx-large;
+}
+
+.dropdown {
+    margin: 0 2rem;
+    font-size: 1.5rem;
+}
+
+.btn {
+    font-size: large;
+    margin: 0 1em;
+    width: 5em;
+    height: 2.25em;
+}
+
+/* .noselect {
+    -webkit-touch-callout: none; /* iOS Safari *
+      -webkit-user-select: none; /* Safari *
+       -khtml-user-select: none; /* Konqueror HTML *
+         -moz-user-select: none; /* Old versions of Firefox *
+          -ms-user-select: none; /* Internet Explorer/Edge *
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox *
+} */
+
+
+/*--------------------
+    Pathfinding Styles
+--------------------*/
+
+#info, #grid-place-opts {
+    margin: auto;
+    width: fit-content;
+    max-width: 95%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#info > h3, #grid-place-opts > h3 {
+    padding-top: 0.5rem;
+}
+
+.node-info {
+    display: flex;
+    align-items: center;
+    max-width: max-content;
+    margin: 0.25rem 0.5rem;
+    padding: 0.15rem 0.5rem;
+    border: 2px solid grey;
+    border-radius: 10px;
+    background: lightgrey;
+    color: black;
+    transition: background linear 250ms;
+    transition: color linear 250ms;
+    cursor: default;
+}
+
+.node-info > * {
+    padding: 0 0.25rem;
+}
+
+.selected {
+    background: grey;
+    color: white;
+}
+
+#board {
+    margin: 2rem auto;
+    width: max-content;
+    max-width: min(95%, 1875px);
+    border-top: 3px solid grey;
+    border-left: 3px solid grey;
+    border-bottom: 2px solid grey;
+    border-right: 2px solid grey;
+}
+
+.gridrow {
+    display: flex;
+    /* flex-wrap: nowrap; */
+}
+
+.square {
+    --square-bg: whitesmoke;
+    width: 20px;
+    height: 20px;
+    border-right: 1px solid grey;
+    border-bottom: 1px solid grey;
+    background: var(--square-bg);
+    transition: background 500ms linear
+}
+
+    /*--------------------
+        Node Styling
+    --------------------*/
+
+    .unvisited {
+        /* --square-bg: var(--lightwhite); */
+        background-color: var(--square-bg);
+    }
+
+    .visiting {
+        background-color: rgb(177, 7, 192);
+    }
+
+    .visited {
+        /* --square-bg: rgb(67, 226, 210); */
+        background-color: rgb(67, 226, 210);
+    }
+
+    .start {
+        /* --square-bg: greenyellow; */
+        background-color: greenyellow;
+    }
+
+    .target {
+        /* --square-bg: red; */
+        background-color: red;
+    }
+
+    .wall {
+        /* --square-bg: grey; */
+        background-color: darkgray;
+    }
+
+    .square--weighted {
+        background-color: #e5e5f7;
+        opacity: 0.8;
+        background-size: 10px 10px;
+        background-image: repeating-linear-gradient(45deg, #444cf7 0, #444cf7 1px, #e5e5f7 0, #e5e5f7 50%); 
+    }
+
+    .path {
+        /* --square-bg: rgb(235, 97, 240); */
+        background-color: rgb(235, 97, 240);
+    }
+
+
+/*--------------------
+    Sorting Styles
+--------------------*/
+#graph {
+    display: flex;
+    align-items: flex-end;
+    padding: 50px;
+    border: 3px solid grey;
+    width: max-content;
+    margin: auto; 
+}
+
+.value {
+    width: 10px;
+    /* height: 50px; */
+    margin: 10px;
+    background-color: black;
+    transition: height 500ms linear;
+    transition: background 250ms linear;
+}
+
+.value-animation {
+    -webkit-animation: flash-green 0.75s normal forwards;
+    -moz-animation: flash-green 0.75s normal forwards;
+    -o-animation: flash-green 0.75s normal forwards;
+    animation: flash-green 0.2s normal forwards;
+    /* animation-iteration-count: 1; */
+}
+
+@keyframes flash-green {
+    0% {
+        background: black;
+    }
+    50% {
+        background: lime;
+    }
+    100% {
+        background: black;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.none {
+    display: none;
+}

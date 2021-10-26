@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="/assets/fontawesome5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!--Source Code Pro, Source Sans Pro, and Source Serif Pro Google fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,900&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+
+    <link href="css/styles.css" rel="stylesheet">
+
+    <title>Algorithm Visualizer</title>
+</head>
+<body>
+
+    <div class="loader-wrapper">
+        <div class="loader"></div>
+    </div>
+
+    <nav>
+        <ul class="navbar">
+            <li><img src="../assets/img/logo.svg" alt="Logo" class="logo"></li>
+            <li><h1 class="hero-title hero-title--small">SAMUEL JONES</h1></li>
+            <li><a href="https://github.com/SamJones329" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github" aria-label="GitHub"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/samuel-jones-25181020a/" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-linkedin-in" aria-label="LinkedIn"></i>
+                </a>
+            </li>
+            <li>
+                <a href="/">Home</a>
+            </li>
+        </ul>
+    </nav>
+    
+    <div id="controls">
+        <header>
+            <div class="title">
+                <h1>Algorithm Visualizer</h1>
+            </div>
+            <div id="algo-type-picker" class="dropdown">
+                <label for="algo-type">Algorithm Type: </label>
+                <select name="algo-type" id="algo-type">
+                    <option value="pathfinding">Pathfinding</option>
+                    <option value="sorting">Sorting</option>
+                </select>
+            </div>
+            <div id="path-algo-picker" class="algo-picker dropdown"><label for=""></label>
+                <label for="path-algo">Algorithm: </label>
+                <select name="path-algo" id="path-algo">
+                    <option value="dijkstra">Dijkstra's Algorithm</option>
+                    <option value="astar">A* Algorithm</option>
+                    <option value="breadth-first">Breadth-First Search</option>
+                    <option value="depth-first">Depth-First Search</option>
+                </select>
+            </div>
+            <div id="sort-algo-picker" class="algo-picker dropdown hidden"><label for=""></label>
+                <label for="sort-algo">Algorithm: </label>
+                <select name="sort-algo" id="sort-algo">
+                    <option value="selection">Selection Sort</option>
+                    <option value="bubble">Bubble Sort</option>
+                    <option value="insertion">Insertion Sort</option>
+                    <option value="merge">Merge Sort</option>
+                    <!-- <option value="quick">Quick Sort</option>
+                    <option value="heap">Heap Sort</option>
+                    <option value="counting">Counting Sort</option>
+                    <option value="radix">Radix Sort</option>
+                    <option value="bucket">Bucket Sort</option>
+                    <option value="shell">Shell Sort</option>
+                    <option value="tim">Tim Sort</option>
+                    <option value="comb">Comb Sort</option>
+                    <option value="pigeonhole">Pigeonhole Sort</option>
+                    <option value="cycle">Cycle Sort</option>
+                    <option value="cocktail">Cocktail Sort</option>
+                    <option value="strand">Strand Sort</option>
+                    <option value="bitonic">Bitonic Sort</option>
+                    <option value="pancake">Pancake Sort</option>
+                    <option value="binaryInsert">Binary Insertion Sort</option>
+                    <option value="bogo">Bogo Sort</option>
+                    <option value="gnome">Gnome Sort</option>
+                    <option value="sleep">Sleep Sort</option>
+                    <option value="struct">Structure Sorting</option>
+                    <option value="stooge">Stooge Sort</option>
+                    <option value="tag">Tag Sort</option>
+                    <option value="tree">Tree Sort</option>
+                    <option value="cartTree">Cartesian Tree Sorting</option>
+                    <option value="oddEven">Odd-Even Sort</option> -->
+                </select>
+            </div>
+            <button type="button" class="btn btn-primary" id="run-btn">Run</button>
+            <button type="button" class="btn btn-primary" id="reset-btn">Reset</button>
+        </header>
+    </div>
+
+    <div id="info">
+        <h3>Info: </h3>
+        <div class="node-info explore-info">
+            <h3 id="explore-count">Squares Explored: N/A</h3>
+        </div>
+        <div class="node-info explore-info">
+            <div class="square visited"></div>
+            <h3>Visited</h3>
+        </div>
+        <div class="node-info explore-info">
+            <div class="square path"></div>
+            <h3>Path</h3>
+        </div>
+        <div class="node-info hidden" id="swap-count-container">
+            <h3 id="swap-count">Swaps Performed: N/A</h3>
+        </div>
+    </div>
+
+    <div id="board-container">
+        <div id="grid-place-opts">
+            <h3>Placement Options: </h3>
+            <div class="node-info place-opt selected">
+                <div class="square start"></div>
+                <h3>Start</h3>
+            </div>
+            <div class="node-info place-opt">
+                <div class="square target"></div>
+                <h3>Target</h3>
+            </div>
+            <div class="node-info place-opt">
+                <div class="square wall"></div>
+                <h3>Wall</h3>
+            </div>
+            <div class="node-info place-opt">
+                <div class="square square--weighted"></div>
+                <h3>Weighted</h3>
+            </div>    
+            <select name="place-opt-select" id="place-opt-select" class="hidden">
+                <option value="Start"></option>
+                <option value="Target"></option>
+                <option value="Wall"></option>
+                <option value="Weighted"></option>
+            </select>
+        </div>
+    </div>
+
+    <div id="arrayGraph-container"></div>
+
+    <script src="js/index.js" type="module"></script>
+</body>
+</html>
