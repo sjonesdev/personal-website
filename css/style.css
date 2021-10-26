@@ -380,6 +380,7 @@ nav {
 }
 
 .skill h3 {
+    margin-top: 2rem;
     color: var(--blue-fluorescent-dark);
 }
 
@@ -414,7 +415,15 @@ nav {
 
 .project-img {
     width: 50%;
-    padding: 5px;
+    height: max-content;
+    margin: 1rem 2rem;
+    box-shadow: 0 4px 8px 0 rgba(255,255,255,0.2);
+    background-color: var(--shades-300);
+}
+
+.project-img--alt {
+    box-shadow: none;
+    background-color: transparent;
 }
 
 .project-img > img {
