@@ -95,7 +95,6 @@
 
 html {
     scroll-behavior: smooth;
-    overflow-x: hidden;
 }
 
 body {
@@ -137,7 +136,7 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-    width: max-content;
+    width: fit-content;
 }
 
 h3 {
@@ -265,6 +264,8 @@ a:hover {
     font-size: 5rem;
     font-family: 'Source Serif Pro', serif;
     font-weight: 900;
+    max-width: 100%;
+    text-align: center;
 }
 
 .hero-title--small {
@@ -307,27 +308,51 @@ a:hover {
     align-items: center;
 }
 
-nav {
+/* nav {
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 9;
     background: var(--blue-fluorescent-dark);
+} */
+
+nav {
+    display: inline;
+    width: 100%;
 }
 
-.navbar {
-    display: flex;
-    align-items: center;
-    width: max-content;
+.mobilesocialnavbar {
     margin: auto;
-    list-style-type: none;
+    width: max-content;
     padding: 0;
 }
 
-.navbar li {
+.navbar {
+    position: -webkit-sticky;
+    position: sticky;
+    top: -1px;
+    z-index: 9;
+    background: var(--blue-fluorescent-dark);
+
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    list-style-type: none;
+    padding: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.navbar-item {
     display: inline-block;
     margin: 10px;
     padding: 10px;
     font-size: 1.3rem;
+}
+
+.mobilesocialnav {
+    display: none;
 }
 
 .scroll-down {
@@ -351,8 +376,8 @@ nav {
 .about-img {
     width: 35%;
     height: max-content;
-    max-height: 300px;
-    max-width: 300px;
+    max-height: 290px; /* max-width + margin = 320px */
+    max-width: 290px;
     flex-shrink: 0;
     margin: 15px;
 }
@@ -372,6 +397,7 @@ nav {
     font-size: 3rem;
     color: var(--orange-fluorescent-dark);
     font-weight: 900;
+
 }
 
 .skill {
@@ -540,6 +566,7 @@ div.form-input {
 
 .input {
     width: 100%;
+    box-sizing: border-box;
     border-radius: 0.5rem;
     border: none;
     padding: 1rem 0.9rem;
@@ -605,7 +632,7 @@ div.form-input {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 3rem 1rem;
+    margin: 3rem 0;
 }
 
 .footer-info {
@@ -653,7 +680,7 @@ div.form-input {
     Mobile Styles
 --------------------*/
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 750px) {
 
     /*--------------------
         General Styles
@@ -662,6 +689,14 @@ div.form-input {
     section {
         width: 95%;
         padding: 1.5rem 2.5%;
+    }
+
+    .socialnav {
+        display: none;
+    }
+
+    .mobilesocialnav {
+        display: inline-block;
     }
 
 
@@ -701,6 +736,14 @@ div.form-input {
     --------------------*/
     .contact-content {
         flex-direction: column;
+    }
+
+    .contact-info {
+        max-width: fit-content;
+    }
+
+    .contact-img {
+        max-width: 80%;
     }
 }
 
