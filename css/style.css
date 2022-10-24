@@ -22,9 +22,9 @@
     ---------------*/
     --blue-earth: #3D4466;
     /* --blue-fluorescent-dark: #1E2B58; */
-    --blue-fluorescent-dark: #092F5C;
+    --blue-fluorescent-dark: #092f5c;
     --blue-fluorescent: #0023D1;
-    --blue-pastel-earth: #99AAFF;
+    --blue-pastel-earth: rgb(153, 170, 255);
     --blue-pastel: #CCD5FF;
 
 
@@ -85,6 +85,7 @@
     --shades-400: #CCCCCC;
     --shades-450: #F7F7F7;
     --shades-500: #FFFFFF;
+    --tint: rgba(0,0,0,0.5)
 
 }
 
@@ -114,6 +115,11 @@ section {
 }
 
 button {
+    text-decoration: none;
+    box-shadow: none;
+}
+
+.btn {
     background-color: var(--orange-fluorescent-dark);
     color: var(--blue-fluorescent-dark);
     padding: .65em 1.5em;
@@ -125,9 +131,27 @@ button {
     transition: background-color 100ms linear;
 }
 
-button:hover {
+.btn:hover {
     background-color: var(--orange-fluorescent);
-    color: var(--blue-fluorescent);
+    /* color: var(--blue-fluorescent); */
+}
+
+.btn--alt {
+    background-color: transparent;
+    border: none;
+    outline: solid 2px var(--orange-fluorescent-dark);
+    outline-offset: -2px;
+    color: var(--orange-fluorescent-dark);
+    padding: .65em 1.5em;
+    border-radius: 1.1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 100ms linear;
+}
+
+.btn--alt:hover {
+    background-color: var(--blue-earth);
 }
 
 h1, h2, h3, h4 {
@@ -427,7 +451,7 @@ nav {
 
 .about-btns button {
     margin-right: 1rem;
-    width: 8rem;
+    width: 9rem;
 } 
 
 

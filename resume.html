@@ -25,19 +25,25 @@
 
     <nav>
         <ul class="navbar">
-            <li><img src="assets/img/logo.svg" alt="Logo" class="logo"></li>
-            <li><h1 class="hero-title hero-title--small">SAMUEL JONES</h1></li>
-            <li><a href="https://github.com/SamJones329" target="_blank" rel="noopener noreferrer">
+            <li class="navbar-item">
+                <a href="/">
+                    <img src="assets/img/logo.svg" alt="Logo" class="logo">
+                </a>
+            </li>
+            <li class="navbar-item">
+                <a href="/">
+                    <h1 class="hero-title hero-title--small">SAMUEL JONES</h1>
+                </a>
+            </li>
+            <li class="navbar-item">
+                <a href="https://github.com/SamJones329" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-github" aria-label="GitHub"></i>
                 </a>
             </li>
-            <li>
+            <li class="navbar-item">
                 <a href="https://www.linkedin.com/in/samuel-jones-25181020a/" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-linkedin-in" aria-label="LinkedIn"></i>
                 </a>
-            </li>
-            <li>
-                <a href="/">Home</a>
             </li>
         </ul>
     </nav>
@@ -47,10 +53,10 @@
             <h1 class="hero-title hero-title--alt">RESUME</h1>
             <div class="links">
                 <a href="assets/files/Resume_Samuel_Jones.pdf" download="Samuel-Jones-Resume">
-                    <button>Download PDF</button>
+                    <button class="btn">Download PDF</button>
                 </a>
                 <a href="https://docs.google.com/document/d/1-1ldmwUmH4UkJVhGMrx5ATdV-i7U9o5ItB9tjkIEBM4/edit?usp=sharing" target="_blank">
-                    <button>View in Google Docs</button>
+                    <button class="btn">View in Google Docs</button>
                 </a>
             </div>
         </div>
@@ -65,11 +71,12 @@
                     <li>Bachelor of Science, Computer Science</li>
                     <li>Minors in Mathematics and Robotics</li>
                     <li>Graduating in Spring 2023</li>
-                    <li>Current GPA 3.83</li>
+                    <li>Current GPA 3.86</li>
                 </ul>
                 <p>
-                    Featured Coursework: Artificial Intelligence, Operating 
-                    Systems, Systems Programming
+                    Featured Coursework: Cloud Fundamentals & Web 
+                    Programming, Interface Design, Computer Networks, 
+                    Database Management Systems
                 </p>
             </div>
         </section>
@@ -77,6 +84,30 @@
         <section id="experience" class="section--alt">
             <h2 class="heading">Experience</h2>
             <div class="flex-wrap-left">
+                <div class="resume-item">
+                    <h3>Flexport Full Stack Software Engineer Intern</h3>
+                    <p>
+                        Remote Internship for Flexport office in San Francisco, CA<br>
+                        June 2022 - August 2022
+                    </p>
+                    <ul>
+                        <li>
+                            Owned a support form integration feature end-to-end, 
+                            heavily refactoring the feature in one application and 
+                            adding an implementation in another, allowing better 
+                            user experience and reduced complexity when modifying 
+                            the support form.
+                        </li>
+                        <li>
+                            Worked as a full-stack developer in a scrum team on 
+                            my own project and general tasks.
+                        </li>
+                        <li>
+                            Developed with technologies such as React.js, Ruby 
+                            on Rails, NextJS, Flow, and GraphQL.
+                        </li>
+                    </ul>
+                </div>
                 <div class="resume-item">
                     <h3>NASA Software Engineer Intern</h3>
                     <p>
@@ -88,15 +119,14 @@
                             Worked in the Test Technology (T2) department.
                         </li>
                         <li>
-                            Created two analytics dashboards for process
-                            improvement metrics and budget forecasting to
-                            allow for more efficient operations and decision
+                            Created two analytics dashboards for process 
+                            improvement metrics and budget forecasting to 
+                            allow for more efficient operations and decision 
                             making of SSC T2 executives.
                         </li>
                         <li>
-                            Developed using primarily Anaconda, Jupyter Notebook,
-                        and Python, utilizing libraries & technologies such
-                        as Pandas, SQLite, and Plotly.
+                            Developed using Anaconda Python, Jupyter, NumPy, 
+                            Pandas, SQLite, Plotly, and basic web technologies.
                         </li>
                     </ul>
                 </div>
@@ -108,22 +138,13 @@
                     </p>
                     <ul>
                         <li>
-                            Mentoring a high school robotics team to be
+                            Mentoring a high school robotics team to be 
                             competitive and promote STEM in their community.
-                            Mentorship includes teaching and demonstrating
-                            technical, organizational and leadership skills to
-                            the students.
                         </li>
                         <li>
-                            Teaching skills including Java, object-oriented
-                            practices, problem-solving, and researching to the
-                            students on the programming sub-team.
-                        </li>
-                        <li>
-                            Helping the students to implement their own feedback
-                            control loops, motion profiling, and vision processing
-                            to allow for autonomous performance of the robot and
-                            enhancement of the robot during human control periods.
+                            Teaching software design and programming skills 
+                            including Java, OOP, test-driven development, scrum, 
+                            and autonomous control systems to students.
                         </li>
                     </ul>
                 </div>
@@ -158,6 +179,46 @@
         <section id="projects" class="section--alt">
             <h2 class="heading">Projects</h2>
             <div class="flex-wrap-left">
+                <div class="resume-item">
+                    <h3>ColumbusList</h3>
+                    <ul>
+                        <li>
+                            Created a website with a React frontend and Django 
+                            REST Framework backend connected to a SQL database 
+                            to demonstrate allowing students of a university to 
+                            arrange buying and selling of items. 
+                        </li>
+                        <li>
+                            Utilized other technologies including TypeScript, 
+                            React Router, SCSS, and Axios.
+                        </li>
+                        <li>
+                            Working in a 5 person scrum team for CSC 4330.
+                        </li>
+                    </ul>
+                    <p>
+                
+                    </p>
+                </div>
+                <div class="resume-item">
+                    <h3>Google Font Box</h3>
+                    <ul>
+                        <li>
+                            Created a simple web-based tool to help developers 
+                            pick fonts and color schemes.
+                        </li>
+                        <li>
+                            Developed using Svelte, SvelteKit, TypeScript, Bulma, 
+                            and SCSS
+                        </li>
+                        <li>
+                            Utilizes the Google Font Developer API and Google Fonts API
+                        </li>
+                    </ul>
+                    <p>
+                
+                    </p>
+                </div>
                 <div class="resume-item">
                     <h3>Medication Reminder</h3>
                     <ul>
@@ -198,7 +259,8 @@
                     <h3>Room Organizer</h3>
                     <ul>
                         <li>
-                            Single-page web application for visualizing room layouts.
+                            Made an interactive static web app for visualizing a 
+                            variety of pathfinding and sorting algorithms.
                         </li>
                         <li>
                             Created using HTML, CSS, Javascript, React.js, and Bootstrap.
@@ -223,7 +285,7 @@
                         <li>C/C++</li>
                         <li>SQL</li>
                         <li>HTML, XHTML, XML</li>
-                        <li>CSS</li>
+                        <li>CSS, SCSS</li>
                         <li>JSON</li>
                         <li>MATLAB</li>
                     </ul>
@@ -231,9 +293,13 @@
                 <div class="resume-item">
                     <h3>Libraries/Frameworks</h3>
                     <ul>
-                        <li>Jupyter</li>
                         <li>React.js</li>
+                        <li>Svelte</li>
                         <li>Node.js</li>
+                        <li>TailwindCSS</li>
+                        <li>Bulma</li>
+                        <li>Bootstrap</li>
+                        <li>Jupyter</li>
                         <li>Express.js</li>
                         <li>Pandas</li>
                         <li>Plotly</li>
@@ -244,9 +310,10 @@
                     <ul>
                         <li>Git</li>
                         <li>GitHub</li>
+                        <li>NPM</li>
+                        <li>Yarn</li>
                         <li>VSCode</li>
                         <li>Linux</li>
-                        <li>Make</li>
                     </ul>
                 </div>
             </div>
@@ -259,13 +326,14 @@
                     <h3>Honors</h3>
                     <ul>
                         <li>Sophmore Honors Distinction (Fall 2021)</li>
-                        <li>President's Honor Roll (Fall 2019 - Spring 2020)</li>
-                        <li>Dean's List (Fall 2020 - Spring 2021)</li>
+                        <li>President's Honor Roll (Fall 2019 - Spring 2020, Fall 2021)</li>
+                        <li>Dean's List (Fall 2020 - Spring 2021, Spring 2022)</li>
                     </ul>
                 </div>
                 <div class="resume-item">
                     <h3>Awards</h3>
                     <ul>
+                        <li>LSU Geaux Hack 2022 2nd Place</li>
                         <li>Flagship Scholars Resident Award Recipient (Fall 2019 - Present)</li>
                         <li>TOPS Honors Award (Fall 2019 - Present)</li>
                     </ul>
@@ -275,10 +343,10 @@
 
         <section id="links" class="section--alt">
             <a href="assets/files/Resume_Samuel_Jones.pdf" download="Samuel-Jones-Resume">
-                <button>Download PDF</button>
+                <button class="btn">Download PDF</button>
             </a>
             <a href="https://docs.google.com/document/d/1-1ldmwUmH4UkJVhGMrx5ATdV-i7U9o5ItB9tjkIEBM4/edit?usp=sharing" target="_blank">
-                <button>View in Google Docs</button>
+                <button class="btn">View in Google Docs</button>
             </a>
         </section>
     </main>
