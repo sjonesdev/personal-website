@@ -470,6 +470,7 @@ nav {
 
 .project-img {
     width: 50%;
+    max-width: 300px;
     height: max-content;
     margin: 1rem 2rem;
     box-shadow: 0 4px 8px 0 rgba(255,255,255,0.2);
