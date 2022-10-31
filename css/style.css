@@ -136,11 +136,9 @@ button {
 
 .btn--alt {
     background-color: transparent;
-    border: none;
-    outline: solid 2px var(--orange-fluorescent-dark);
-    outline-offset: -2px;
+    border: solid 2px var(--orange-fluorescent-dark);
     color: var(--orange-fluorescent-dark);
-    padding: .65em 1.5em;
+    padding: calc(.65em - 2px) calc(1.5em - 2px); /* remove 4 px of padding so can use border instead of outline since safari doesn't seem to support border-radius applying to outline correctly*/
     border-radius: 1.1rem;
     font-size: 1.2rem;
     font-weight: 600;
