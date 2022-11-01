@@ -150,6 +150,18 @@ button {
     scale: 1.1;
 }
 
+audio {
+    border-radius: 0.5rem;
+    background-color: var(--blue-fluorescent-dark);
+}
+
+.audio-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: inherit;
+}
+
 h1, h2, h3, h4 {
     margin: 0;
     line-height: 1.1;
@@ -479,6 +491,7 @@ nav {
 
 .project-details {
     width: 65%;
+    font-size: 1.3rem;
 }
 
 .project-details-bottom {
