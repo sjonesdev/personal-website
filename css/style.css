@@ -187,9 +187,18 @@ button {
     scale: 1.1;
 }
 
+.accordion-container {
+    margin-bottom: 2rem;
+}
+
 .accordion-btn {
     font-size: xx-large;
     color: var(--shades-450);
+}
+
+.accordion-content {
+    margin: 0 2.5rem;
+    padding-bottom: 2.5rem;
 }
 
 .btn--alt {
@@ -511,7 +520,6 @@ nav {
 .project {
     display: flex;
     align-items: center;
-    margin-bottom: 2rem;
 }
 
 .project--alt {
