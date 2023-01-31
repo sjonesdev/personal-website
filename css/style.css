@@ -196,9 +196,25 @@ button {
     color: var(--shades-450);
 }
 
+.accordion-icon {
+    transition: all 200ms ease-in-out;
+}
+
+.accordion-icon--active {
+    transform: scaleY(-1);
+}
+
 .accordion-content {
     margin: 0 2.5rem;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all ease-in-out 300ms;
+}
+
+.accordion-content--open {
     padding-bottom: 2.5rem;
+    max-height: 15rem;
 }
 
 .btn--alt {

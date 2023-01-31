@@ -6,25 +6,22 @@ window.onload = () => {
 
 /**
  * 
- * @param {Element} inactiveIcon 
- * @param {Element} activeIcon 
+ * @param {Element} icon 
  * @param {Element} accordionContent 
  * @returns 
  */
-function getAccordionOnClick(inactiveIcon, activeIcon, accordionContent) {
+function getAccordionOnClick(icon, accordionContent) {
     let expanded = false;
-    accordionContent.classList.add('none');
-    activeIcon.classList.add('none');
+    // accordionContent.classList.add('none');
+    icon.classList.remove('accordion-icon--active');
     return (/** @type MouseEvent */event) => {
         if(expanded) {
-            accordionContent.classList.add('none'); // currently showing, so hide
-            inactiveIcon.classList.remove('none');
-            activeIcon.classList.add('none');
+            accordionContent.classList.remove('accordion-content--open'); // currently showing, so hide
+            icon.classList.remove('accordion-icon--active');
         }
         else {
-            accordionContent.classList.remove('none'); // currently hidden, so show
-            inactiveIcon.classList.add('none');
-            activeIcon.classList.remove('none');
+            accordionContent.classList.add('accordion-content--open'); // currently hidden, so show
+            icon.classList.add('accordion-icon--active');
         }
         expanded = !expanded
     }
@@ -34,8 +31,7 @@ const accordions = document.getElementsByClassName('accordion-container');
 for(const accordion of accordions) {
     /** @type HTMLButtonElement */
     const accordionButton = accordion.querySelector('button.accordion-btn');
-    const activeIcon = accordionButton.querySelector('i.fa-chevron-up');
-    const inactiveIcon = accordionButton.querySelector('i.fa-chevron-down');
+    const icon = accordionButton.querySelector('i.fa-chevron-down');
     const accordionContent = accordion.querySelector('div.accordion-content');
-    accordionButton.onclick = getAccordionOnClick(inactiveIcon, activeIcon, accordionContent)
+    accordionButton.onclick = getAccordionOnClick(icon, accordionContent)
 }
