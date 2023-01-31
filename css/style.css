@@ -84,7 +84,8 @@
     --shades-400: #CCCCCC;
     --shades-450: #F7F7F7;
     --shades-500: #FFFFFF;
-    --tint: rgba(0,0,0,0.5)
+    --tint: rgba(0,0,0,0.5);
+    --less-tint: rgba(0,0,0,0.25);
 
 }
 
@@ -116,10 +117,62 @@ section {
 button {
     text-decoration: none;
     box-shadow: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.hover-underline {
+    text-decoration: underline;
+    text-decoration-color: rgba(0,0,0,0);
+    text-decoration-thickness: 2px;
+    transition: text-decoration-color 100ms ease-in-out;
+}
+
+.hover-underline:hover {
+    text-decoration-color: inherit;
+}
+
+.text-big {
+    font-size: 1.3rem;
+}
+
+.text-blue {
+    color: var(--blue-fluorescent-dark);
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.my-4 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.mt-8 {
+    margin-top: 2rem;
+}
+
+.mt-12 {
+    margin-top: 3rem;
+}
+
+.mb-0 {
+    margin-bottom: 0;
+}
+
+.max-w-max {
+    max-width: max-content;
 }
 
 .btn {
-    background-color: var(--orange-fluorescent-dark);
+    background-color: var(--orange-fluorescent);
     color: var(--blue-fluorescent-dark);
     padding: .65em 1.5em;
     border-radius: 1.1rem;
@@ -132,6 +185,11 @@ button {
 
 .btn:hover {
     scale: 1.1;
+}
+
+.accordion-btn {
+    font-size: xx-large;
+    color: var(--shades-450);
 }
 
 .btn--alt {
@@ -173,7 +231,7 @@ h1 {
 
 h3 {
     font-size: 2rem;
-    color: var(--orange-fluorescent-dark);
+    color: var(--orange-fluorescent);
 }
 
 h4 {
@@ -203,10 +261,6 @@ a {
 
 a.inline {
     text-decoration: underline;
-}
-
-a:hover {
-    color: var(--shades-300);
 }
 
 .hidden {
@@ -428,7 +482,6 @@ nav {
 }
 
 .skill {
-    --border-color: var(--orange-fluorescent-dark);
     width: 100%;
     max-width: 15rem;
     border: 2px solid var(--border-color);
@@ -444,12 +497,6 @@ nav {
 
 .skill p {
     margin: 1em 0;
-}
-
-.skill--alt {
-    --border-color: var(--blue-fluorescent-dark);
-    background: var(--orange-fluorescent);
-    color: var(--blue-fluorescent-dark);
 }
 
 .about-btns button {
@@ -468,7 +515,7 @@ nav {
 }
 
 .project--alt {
-    flex-direction: row-reverse;
+    /* flex-direction: row-reverse; */
 }
 
 .project-img {
@@ -503,11 +550,13 @@ nav {
     min-width: 30%;
 }
 
+.project-desc {
+    color: var(--shades-500)
+}
+
 .project-stack {
-    background: var(--shades-450);
-    color: var(--shades-200);
+    color: var(--shades-450);
     border-radius: 1rem;
-    padding: 0.25rem 0.5rem;
     margin: 1rem 0;
 }
 
@@ -545,9 +594,8 @@ nav {
 .contact-info {
     padding: 1rem;
     margin: 1rem;
-    background: var(--blue-pastel);
     color: var(--shades-200);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
 }
 
 .contact-content h4 {
@@ -559,7 +607,7 @@ nav {
 }
 
 .contact-img {
-    width: 100%;
+    /* width: 100%; */
 }
 
 .err-msg {
@@ -660,7 +708,8 @@ div.form-input {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 3rem 0;
+    margin-top: 1.5rem;
+    margin-bottom: 3rem;
 }
 
 .footer-info {
@@ -697,6 +746,7 @@ div.form-input {
 .resume-item {
     max-width: 40rem;
     margin-right: 2rem;
+    margin-bottom: 2rem;
 }
 
 #links button {
