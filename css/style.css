@@ -216,13 +216,13 @@ button {
     margin: 0 2.5rem;
     padding: 0;
     max-height: 0;
-    overflow: hidden;
+    overflow-y: hidden;
     transition: all ease-in-out 300ms;
 }
 
 .accordion-content--open {
     padding-bottom: 2.5rem;
-    max-height: 25rem;
+    max-height: 30rem;
 }
 
 .btn--alt {
@@ -597,6 +597,7 @@ nav {
     display: flex;
     align-items: center;
     gap: 0.75rem;
+    padding-left: 0.37rem;
 }
 
 .project-code-link {
