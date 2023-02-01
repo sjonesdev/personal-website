@@ -197,6 +197,32 @@ button {
 
 .accordion-container {
     margin-bottom: 2rem;
+    position: relative;
+}
+
+.accordion-container::before {
+    content: "";
+    background-image: url("/assets/img/accordionframe.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 3rem;
+    height: 2rem;
+    top: 0;
+    left: 1rem;
+}
+
+.accordion-container::after {
+    content: "";
+    background-image: url("/assets/img/accordionframe.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 3rem;
+    height: 2rem;
+    bottom: 1rem;
+    right: 0;
+    transform: rotate(180deg);
 }
 
 .accordion-btn {
