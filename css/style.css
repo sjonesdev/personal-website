@@ -225,6 +225,11 @@ button {
     transform: rotate(180deg);
 }
 
+.accordion-video {
+    width: 75%;
+    margin: 1rem auto;
+}
+
 .accordion-btn {
     font-size: xx-large;
     color: var(--shades-450);
@@ -244,11 +249,13 @@ button {
     max-height: 0;
     overflow-y: hidden;
     transition: all ease-in-out 300ms;
+    display: flex;
+    flex-direction: column;
 }
 
 .accordion-content--open {
     padding-bottom: 2.5rem;
-    max-height: 30rem;
+    max-height: 50rem;
 }
 
 .btn--alt {
