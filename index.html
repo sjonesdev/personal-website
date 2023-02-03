@@ -97,7 +97,7 @@
     <main>
         <section id="about" class="section--alt">
             <div class="container">
-                <h2 class="heading">About me</h2>
+                <h2 class="heading screenreader">About me</h2>
                 <div class="about-me">
                     <div class="about-img"><img src="assets/img/portfolio-portrait.png" alt="A picture of Samuel Jones">
                     </div>
@@ -129,7 +129,6 @@
                     </div>
                 </div>
 
-                <h2 class="heading">What I do</h2>
                 <div class="about-skills flex-wrap-center">
                     <div class="skill">
                         <h3>Front-End</h3>
@@ -200,21 +199,24 @@
                         </div>
                         <div class="project-details">
                             <h3>Stare Into The Void</h3>
-                            <p class="project-desc">
+                            <p class="project-brief">
                                 Website allowing user to browse through images from NASA's
                                 official image APIs
                             </p>
+                            <a href="https://stareintothevoid.com" target="_blank" rel="noopener noreferrer"><button
+                                    class="btn">Try it out!</button></a>
                         </div>
                         <button class="accordion-btn"><i class="fas fa-chevron-down accordion-icon"></i></button>
                     </div>
                     <div class="accordion-content">
-                        <video class="accordion-video" controls preload="none" poster="assets/img/stareintothevoid.png"
+                        <video class="accordion-video" controls poster="assets/img/stareintothevoid.png"
                             src="/assets/video/stareintothevoidwalkthrough.mp4" type="video/mp4"></video>
                         <p class="project-desc">
                             This project was developed in a 5 person group as part of CSC 4243 Interface Design.
                             The purpose of this project was to develop a good user interface for some software of our
                             choosing by going through various rounds of user testing and using that feedback to iterate
-                            on the design.<br class="br">
+                            on the design.
+                        <p class="project-desc">
                             Through the development process, users tested the software through series of
                             interviews, surveys, and observations. This allowed us to witness users using the design and
                             get their direct feedback to apply to the design iterations. For this project we chose to
@@ -227,10 +229,8 @@
                             Firebase (Hosting & Cloud Functions), Figma
                         </p>
                         <div class="project-links">
-                            <a href="https://stareintothevoid.com" target="_blank" rel="noopener noreferrer"><button
-                                    class="btn">Try it out!</button></a>
-                            <a href="https://github.com/SamJones329/stare-into-the-void" target="_blank"
-                                class="project-code-link hover-underline">Source Code</a>
+                            <a href="https://github.com/SamJones329/stare-into-the-void" target="_blank"><button
+                                    class="btn">Github</button></a>
                             <a href="/assets/files/CSC 4243 - Final Report - Stare Into The Void.pdf" target="_blank"
                                 class="project-code-link hover-underline">Project Report</a>
                         </div>
@@ -243,10 +243,12 @@
                         </div>
                         <div class="project-details">
                             <h3>Google Font Box</h3>
-                            <p class="project-desc">
+                            <p class="project-brief">
                                 Personal project to help myself and other developers pick their next fonts and color
                                 scheme.
                             </p>
+                            <a href="https://spjones.dev/google-font-box" target="_blank"
+                                rel="noopener noreferrer"><button class="btn">Try it out!</button></a>
                         </div>
                         <button class="accordion-btn"><i class="fas fa-chevron-down accordion-icon"></i></button>
                     </div>
@@ -255,7 +257,8 @@
                             For this project, I wanted to prioritize learning a new web framework as well as making
                             something I could use in future projects. I tend to use Google Fonts a lot for various
                             projects, so I wanted to try to develop a better interface to try them out than the one
-                            provided by Google.<br class="br">
+                            provided by Google.
+                        <p class="project-desc">
                             I decided an up-and-coming technology like Svelte would be a good choice due to its rapidly
                             rising popularity and continued praise from its community. So, from there, I worked to
                             create a simple web-based tool to help developers like me pick fonts and color schemes.
@@ -266,10 +269,9 @@
                             SCSS, Google Font APIs
                         </p>
                         <div class="project-links">
-                            <a href="https://spjones.dev/google-font-box" target="_blank"
-                                rel="noopener noreferrer"><button class="btn">Try it out!</button></a>
-                            <a href="https://github.com/SamJones329/room-organizer" target="_blank"
-                                class="project-code-link hover-underline">Source Code</a>
+
+                            <a href="https://github.com/SamJones329/room-organizer" target="_blank"><button
+                                    class="btn">Github</button></a>
                         </div>
                     </div>
                 </div>
@@ -282,9 +284,10 @@
                         </div>
                         <div class="project-details">
                             <h3>Algorithm Visualizer</h3>
-                            <p class="project-desc">
+                            <p class="project-brief">
                                 Simple website to created as a way to better understand sorting algorithms.
                             </p>
+                            <a href="/algorithm-visualizer/index.html"><button class="btn">Try it out!</button></a>
                         </div>
                         <button class="accordion-btn"><i class="fas fa-chevron-down accordion-icon"></i></button>
                     </div>
@@ -294,11 +297,13 @@
                             algorithms and of Javascript as a language. I wanted to develop a more intuitive
                             understanding of these algorithms so that I could better apply them when needed, so I
                             decided the best way would be to implement them for myself and develop a visualization
-                            scheme in the process.<br class="br">
+                            scheme in the process.
+                        <p class="project-desc">
                             I was also worried that in my studies I was focusing too much on Javascript in the context
                             of frameworks and libraries, and so had a goal to develop this with entirely vanilla
                             Javascript. This was so I could better understand the language and event-driven programming
-                            in general.<br class="br">
+                            in general.
+                        <p class="project-desc">
                             The result was a painful but crucial leap in understanding of both computer
                             science algorithms and Javascript, as well as a lightweight application to visualize sorting
                             and pathfinding algorithms.
@@ -308,9 +313,9 @@
                             HTML, CSS, JavaScript, Bootstrap
                         </p>
                         <div class="project-links">
-                            <a href="/algorithm-visualizer/index.html"><button class="btn">Try it out!</button></a>
+
                             <a href="https://github.com/SamJones329/algorithm-visualizer" target="_blank"
-                                rel="noopener noreferrer" class="project-code-link hover-underline">Source Code</a>
+                                rel="noopener noreferrer"><button class="btn">Github</button></a>
                         </div>
                     </div>
                 </div>
@@ -329,7 +334,7 @@
                             </div>
                             <div class="project-details">
                                 <h3>Flexport Full Stack Intern</h3>
-                                <p class="project-desc">
+                                <p class="project-brief">
                                     Developed Jira-integrated support feature with industry technologies including React
                                     and Ruby on Rails.
                                 </p>
@@ -341,11 +346,13 @@
                                 During this internship, I owned a support form integration feature end-to-end, heavily
                                 refactoring the feature in one application and adding an implementation in another,
                                 allowing better user experience and reduced complexity when modifying the support
-                                form.<br class="br">
+                                form.
+                            <p class="project-desc">
                                 Through this internship structure, I was able to better myself as a software engineer
                                 both in my personal skills and as part of a team. I participated in daily and weekly
                                 SCRUM meetings, organized communications between stakeholders of the support feature,
-                                and efficiently gather requirements and recommendations for the feature.<br class="br">
+                                and efficiently gather requirements and recommendations for the feature.
+                            <p class="project-desc">
                                 Simultaneously, I was able to learn and operate mostly autonomously on a day-to-day
                                 basis, learning new technologies and developing the support feature, with my teammates
                                 and manager answering any questions if I became stuck.
@@ -372,7 +379,7 @@
                             </div>
                             <div class="project-details">
                                 <h3>NASA Software Engineer Intern</h3>
-                                <p class="project-desc">
+                                <p class="project-brief">
                                     Created analytics dashboards to aid in process improvement using technologies such
                                     as Jupyter and Pandas.
                                 </p>
@@ -385,11 +392,13 @@
                                 improvement and budget forecasting for organization executives at NASA Technology
                                 Transfer. My manager did not have experience with software development and was simply
                                 the stakeholder from which I got feedback about the performance and ease of use of the
-                                tools.<br class="br">
+                                tools.
+                            <p class="project-desc">
                                 Although this structure made it difficult to clearly ascertain requirements at times, it
                                 significantly helped me develop my software development skills precisely because of
                                 that. It also allowed me to develop skills of learning on the fly, as many of the
-                                technologies used in the dashboards I was unfamiliar with at the time.<br class="br">
+                                technologies used in the dashboards I was unfamiliar with at the time.
+                            <p class="project-desc">
                                 For the conclusion of this internship, I had to present my progress and acheivements
                                 through an organization wide presentation. Here I was able to use my skills developed
                                 from previous Communication Intensive courses at LSU such as my introductory Honors
@@ -411,7 +420,7 @@
                             </div>
                             <div class="project-details">
                                 <h3>LSU iCORE Lab Research Assistant</h3>
-                                <p class="project-desc">
+                                <p class="project-brief">
                                     Developing computer vision systems to allow for underwater navigation and
                                     post-mission 3D reconstructions.
                                 </p>
@@ -449,8 +458,8 @@
                             </div>
                             <div class="project-details">
                                 <h3>FRC Team Mentor</h3>
-                                <p class="project-desc">
-                                    Mentoring rookie robotics team 8044 by teaching programming skills since 2019
+                                <p class="project-brief">
+                                    Mentoring rookie robotics team 8044 in programming and electrical skills since 2019
                                 </p>
                             </div>
                             <button class="accordion-btn"><i class="fas fa-chevron-down accordion-icon"></i></button>
@@ -460,8 +469,7 @@
                                 Since 2019, I have mentored FIRST Robotics Competition Team 8044 Denham Venom from their
                                 inception, teaching students various programming and robotics skills and leading them
                                 through applying these skills to their competition robots, even winning an Autonomous
-                                Award at the 2022 Tallahassee Regional event.<br class="br">
-
+                                Award at the 2022 Tallahassee Regional event.
                             </p>
                             <div class="project-links">
                                 <a href="https://github.com/Denham-Venom" target="_blank"
@@ -476,8 +484,9 @@
                             </div>
                             <div class="project-details">
                                 <h3>CSC 4330 Project Group Leader</h3>
-                                <p class="project-desc">
-                                    Acted as team leader for the 6 person semester long website development project for
+                                <p class="project-brief">
+                                    Acted as team leader and lead front-end developer for the 6 person semester long
+                                    website development project for
                                     CSC 4330 Software Systems at LSU
                                 </p>
                             </div>
@@ -488,7 +497,9 @@
                                 As a team lead I was responsible for the organization and project management of the
                                 project. I was able to keep the group members on task and clearly define their roles and
                                 responsibilities, while also organizing meeting and project management software for the
-                                team.<br class="br">
+                                team.
+                            </p>
+                            <p class="project-desc">
                                 We used GitHub projects as a project management software, and at weekly meetings we
                                 would close old tickets then create and assign new ones. I also drafted milestone
                                 reports which would then be reviewed and edited by the team members.
@@ -510,8 +521,9 @@
                             </div>
                             <div class="project-details">
                                 <h3>CSC 4263 Project Group Leader</h3>
-                                <p class="project-desc">
-                                    Acted as team leader and lead website develop for the semester long game development
+                                <p class="project-brief">
+                                    Acted as team leader, lead website develop, animation developer, and weapon systems
+                                    develop for the semester long game development
                                     project for CSC 4263 Video Game Design at LSU
                                 </p>
                             </div>
@@ -522,7 +534,8 @@
                                 The most important aspect of this project from a project management perspective is
                                 communication between the team members. Due to the fast paced nature of game
                                 development, without good communication, heavy refactoring and bug-fixing could be
-                                needed for what should be simple feature merges.<br class="br">
+                                needed for what should be simple feature merges.
+                            <p class="project-desc">
                                 For this, we decided to use Trello as our project management software which allowed us
                                 to easily visualize everyone's progress in a glance. Also, biweekly progress meetings
                                 were set up to coordinate development of assets, the game world, and scripts. Finally a
