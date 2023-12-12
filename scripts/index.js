@@ -3,6 +3,7 @@ window.onload = () => {
     fadeTarget.classList.add('fade-out');
     setTimeout(() => {fadeTarget.classList.add('none')}, 500);
     setupAccordions();
+    scrollToIdInUrl();
 };
 
 /**
@@ -49,4 +50,12 @@ const accordions = document.getElementsByClassName('accordion-container');
             accordionButton.onclick();
         });
     }
+}
+
+function scrollToIdInUrl() {
+    const id = window.location.toString().split('#')[1];
+    if(!id) return;
+    const element = document.getElementById(id);
+    if(!element) return;
+    element.scrollIntoView();
 }
