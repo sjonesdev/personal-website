@@ -593,10 +593,6 @@ nav {
     background-color: var(--less-tint);
 }
 
-.project--alt {
-    /* flex-direction: row-reverse; */
-}
-
 .project-img {
     width: 50%;
     max-width: 300px;
@@ -908,6 +904,10 @@ div.form-input {
 
     .project-details {
         width: 100%;
+    }
+
+    .accordion-btn {
+        margin-right: auto;
     }
     
     
