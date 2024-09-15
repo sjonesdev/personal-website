@@ -35,15 +35,15 @@
 		}
 	}
 
-	const getActiveSec = () => {
+	const updateActiveSec = () => {
 		for (let i = 0; i < sectionElems.length; i++) {
 			const sec = sectionElems[i];
 			const rect = sec.getBoundingClientRect();
 			if (
-				rect.top >= 0 &&
-				rect.left >= 0 &&
-				rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-				rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+				rect.top >= 0 //&&
+				// rect.left >= 0 &&
+				// rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+				// rect.right <= (window.innerWidth || document.documentElement.clientWidth)
 			) {
 				activeSection = i;
 				console.log(`setting active section to ${SECTIONS[i]}`);
@@ -52,22 +52,27 @@
 		}
 	};
 
+	function checkWidthForScroll(mediaMatch: boolean) {
+		if (mediaMatch) {
+			console.log('adding discrete scroll');
+			window.addEventListener('wheel', discreteScrollEventHandler, { passive: false });
+		} else {
+			console.log('removing discrete scroll');
+			window.removeEventListener('wheel', discreteScrollEventHandler);
+		}
+	}
+
 	const discreteScrollEventHandler = throttleEvent(discreteScroll, 1000, true);
 	// TODO - set current active section when page is refreshed
 	onMount(() => {
 		var discreteScrollMediaQuery = window.matchMedia('(min-width: 1100px)');
+		checkWidthForScroll(discreteScrollMediaQuery.matches);
 		discreteScrollMediaQuery.addEventListener('change', (e) => {
-			if (e.matches) {
-				console.log('adding discrete scroll');
-				window.addEventListener('wheel', discreteScrollEventHandler, { passive: false });
-			} else {
-				console.log('removing discrete scroll');
-				window.removeEventListener('wheel', discreteScrollEventHandler);
-			}
+			checkWidthForScroll(e.matches);
 		});
 		sectionElems = document.getElementsByTagName('section');
 		console.log(sectionElems);
-		getActiveSec();
+		updateActiveSec();
 	});
 
 	function getClickForSection(idx: number) {
