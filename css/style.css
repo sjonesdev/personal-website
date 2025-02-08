@@ -729,10 +729,6 @@ nav {
     color: var(--blue-earth);
 }
 
-.contact-img {
-    /* width: 100%; */
-}
-
 .err-msg {
     color: var(--pink-earth);
     font-size: 1.1rem;
