@@ -31,6 +31,7 @@ function setupAccordions() {
             if (accordionsOpen[i]) {
                 accordionContent.style.maxHeight = "0px";
                 icon.classList.remove("accordion-icon--active");
+                accordion.classList.remove("accordion-container--open");
             } else {
                 accordionContent.style.maxHeight = "none";
                 const height = `${accordionContent.offsetHeight}px`;
@@ -39,6 +40,7 @@ function setupAccordions() {
                     accordionContent.style.maxHeight = height;
                 }, 0);
                 icon.classList.add("accordion-icon--active");
+                accordion.classList.add("accordion-container--open");
             }
             accordionsOpen[i] = !accordionsOpen[i];
         };
